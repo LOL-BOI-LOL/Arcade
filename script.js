@@ -52,7 +52,7 @@ function start() {
       working = false;
       return;
     }
-    txtBalance.innerHTML = '$' + (parseFloat(txtBalance.innerHTML.split('$')[1]) - parseFloat(numBet));
+    txtBalance.innerHTML = '$' + (parseFloat(txtBalance.innerHTML.split('$')[1]) - Math.floor(parseFloat(numBet) * 100)/100);
     decision();
   }
 }
