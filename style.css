@@ -1,0 +1,84 @@
+* {
+  margin: 0px;
+}
+#divTower {
+  position: fixed;
+  bottom: 12.5vh;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+  width: 100vw;
+}
+#divTower > p {
+  font-size: 4vh;
+  width: 20vw;
+  height: 12.5vh;
+  text-align: center;
+  background-color: rgba(44, 44, 44, 0.705);
+  border: 0.5vh solid rgb(44, 44, 44);
+  padding: 4.25vh;
+}
+#divControls {
+  padding: 2.5vh 0vw;
+  display: flex;
+  position: fixed;
+  background-color: rgb(20, 20, 20);
+  flex-direction: row;
+  align-items: center;
+  width: 100vw;
+  bottom: 0px;
+  color: white;
+  text-align: center;
+}
+#inputBet {
+  width: 25vw;
+  font-size: 4.5vh;
+  margin: 0vh 4.16666667vw;
+}
+#inputBet[type='number'] {
+  background-color: rgb(31, 31, 31);
+  border: 0.5vw solid white;
+  color: white;
+  text-align: center;
+}
+#btnBet {
+  width: 25vw;
+  font-size: 4.5vh;
+  margin: 0vh 4.16666667vw;
+}
+#txtBalance {
+  width: 25vw;
+  font-size: 4.5vh;
+  margin: 0vh 4.16666667vw;
+}
+#divPopUp {
+  display: none;
+  position: absolute;
+  width: 30vw;
+  font-size: 4vh;
+  text-align: center;
+  background-color: red;
+  border: 0.2vw solid black;
+  padding: 13vh 0vw;
+}
+#divOutcome > p {
+  display: inherit;
+  width: 100vw;
+  font-size: 10vh;
+  text-align: center;
+  background-color: rgb(51, 255, 0);
+  border: 0.2vw solid black;
+  margin-top: 30vh;
+  padding: 12.5vh 0vw;
+  z-index: 3;
+}
+#divOutcome {
+  display: none;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  background-color: rgba(14, 14, 14, 0.849);
+  z-index: 2;
+}
