@@ -92,12 +92,12 @@ function showoutcome(winnings) {
 }
 function decision() {
   let winnings = 0;
-  if(Math.random() >= 0.35) {
+  if(Math.random() >= 0.325) {
     let top = up();
     if(top == 't') {
       winnings = Math.floor(inputBet.value*8*100)/100;
       showoutcome(winnings);
-      txtBalance.innerHTML = '$' + (parseFloat(txtBalance.innerHTML.split('$')[1]) + winnings);
+      txtBalance.innerHTML = '$' + Math.floor(parseFloat(txtBalance.innerHTML.split('$')[1]) + winnings);
       setBalance();
       working = false;
     } else {
