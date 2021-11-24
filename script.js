@@ -92,7 +92,7 @@ function showoutcome(winnings) {
 }
 function decision() {
   let winnings = 0;
-  if(Math.random() >= 0.4) {
+  if(Math.random() >= 0.35) {
     let top = up();
     if(top == 't') {
       winnings = Math.floor(inputBet.value*8*100)/100;
