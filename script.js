@@ -118,7 +118,7 @@ function decision() {
       winnings = Math.floor(parseFloat(inputBet.value) * 100 * (0.25 * Math.pow(2, thelevel))) / 100;
     }
     showoutcome(winnings);
-    txtBalance.innerHTML = '$' + (parseFloat(txtBalance.innerHTML.split('$')[1]) + Math.floor(winnings * 100)/100);
+    txtBalance.innerHTML = '$' + Math.floor(parseFloat(txtBalance.innerHTML.split('$')[1]) + Math.floor(winnings * 100)/100);
     setBalance();
     working = false;
   }
