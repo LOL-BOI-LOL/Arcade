@@ -10,10 +10,23 @@ btnBet.addEventListener('click', start);
 divPopUp.addEventListener('click', hidepopup);
 divOutcome.addEventListener('click', function(){ divOutcome.style.display = 'none'; reset(); });
 
+function restock() {
+  curdate = new Date();
+  curdate = '' + curdate.getDate() + curdate.getMonth() + curdate.getFullYear();
+  olddate = localStorage.getItem('Date');
+  if(olddate == null) {
+    localStorage.setItem('Date', btoa(curdate));4
+    localStorage.setItem('Balance',btoa(parseFloat(atob(localStorage.getItem('Balance'))) + 1000));
+  }else if(atob(olddate) !== curdate) {
+    localStorage.setItem('Balance',btoa(parseFloat(atob(localStorage.getItem('Balance'))) + 1000));
+    localStorage.setItem('Date', btoa(curdate));
+  }
+  fetchBalance();
+}
 function fetchBalance() {
   bal = localStorage.getItem('Balance');
   if(bal == null) {
-    localStorage.setItem('Balance', btoa(10));
+    localStorage.setItem('Balance', btoa(1000));
     bal = btoa(1000);
   }
   bal = atob(bal);
@@ -109,3 +122,4 @@ function decision() {
 }
 
 fetchBalance();
+restock();
