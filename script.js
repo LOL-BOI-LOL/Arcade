@@ -41,12 +41,15 @@ function start() {
     let numBet = inputBet.value;
     if(numBet == '') { 
       showpopup('Invalid Bet');
+      working = false;
       return;
     }else if(parseFloat(numBet) == 0) {
       showpopup('Cannot Bet $0');
+      working = false;
       return;
     }else if(parseFloat(numBet) > txtBalance.innerHTML.split('$')[1]) {
       showpopup('Cannot Bet More Than You Have');
+      working = false;
       return;
     }
     txtBalance.innerHTML = '$' + (parseFloat(txtBalance.innerHTML.split('$')[1]) - parseFloat(numBet));
