@@ -95,9 +95,9 @@ function decision() {
   if(Math.random() >= 0.325) {
     let top = up();
     if(top == 't') {
-      winnings = Math.floor(inputBet.value*8*100)/100;
+      winnings = Math.floor(Math.floor(inputBet.value*100)*8)/100;
       showoutcome(winnings);
-      txtBalance.innerHTML = '$' + Math.floor(parseFloat(txtBalance.innerHTML.split('$')[1]) + winnings);
+      txtBalance.innerHTML = '$' + (parseFloat(txtBalance.innerHTML.split('$')[1]) + winnings);
       setBalance();
       working = false;
     } else {
@@ -115,10 +115,10 @@ function decision() {
     if(thelevel == -1) {
       showoutcome(0);
     } else {
-      winnings = Math.floor(parseFloat(inputBet.value) * 100 * (0.25 * Math.pow(2, thelevel))) / 100;
+      winnings = Math.floor(Math.floor(parseFloat(inputBet.value)*100) * (0.25 * Math.pow(2, thelevel))) / 100;
     }
     showoutcome(winnings);
-    txtBalance.innerHTML = '$' + Math.floor(parseFloat(txtBalance.innerHTML.split('$')[1]) + Math.floor(winnings * 100)/100);
+    txtBalance.innerHTML = '$' +(parseFloat(txtBalance.innerHTML.split('$')[1]) + Math.floor(winnings * 100)/100);
     setBalance();
     working = false;
   }
